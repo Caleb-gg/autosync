@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- existing colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- business home screen colors -->
+    <color name="business_home_background">#2196F3</color>  <!-- Blue background -->
+    <color name="button_accent">#FFC107</color>               <!-- Amber accent for buttons -->
+</resources>
