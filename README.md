@@ -34,19 +34,19 @@ Each car is displayed in a **RecyclerView** using **CardViews**, and the mechani
 ## Screenshots
 
 ### Login Screen
-<img src="./screenshots/Login_Screen.png" alt="Login Screen Screenshot" width="700"/>
+<img src="./screenshots/Login_Screen.png" alt="Login Screen Screenshot" width="400"/>
 
 ### Business Dashboard
-<img src="./screenshots/Business_Dashboard.png" alt="Business Dashboard Screenshot" width="700"/>
+<img src="./screenshots/Business_Dashboard.png" alt="Business Dashboard Screenshot" width="400"/>
 
 ### Add Vehicle GIF
-<img src="./screenshots/add_vehicle_gif.gif" alt="Add Vehicle GIF" width="700"/>
+<img src="./screenshots/add_vehicle_gif.gif" alt="Add Vehicle GIF" width="400"/>
 
 ### Customer Dashboard
-<img src="./screenshots/Customer_Dashboard.png" alt="Customer Dashboard Screenshot" width="700"/>
+<img src="./screenshots/Customer_Dashboard.png" alt="Customer Dashboard Screenshot" width="400"/>
 
 ### Search Business Screen
-<img src="./screenshots/Business_Search.png" alt="Business Search Screenshot" width="700"/>
+<img src="./screenshots/Business_Search.png" alt="Business Search Screenshot" width="400"/>
 
 
 ## 🌐 API Integration
