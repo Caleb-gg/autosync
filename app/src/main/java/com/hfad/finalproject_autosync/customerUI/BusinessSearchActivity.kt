@@ -19,6 +19,7 @@ class BusinessSearchActivity : AppCompatActivity() {
     private val db = FirebaseFirestore.getInstance()
     private val businesses = mutableListOf<Business>()
     private lateinit var adapter: BusinessAdapter
+    private var isSearching = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,16 +49,19 @@ class BusinessSearchActivity : AppCompatActivity() {
     }
 
     private fun performSearch() {
+        if (isSearching) return  // prevent double call
+        isSearching = true
+
         val searchQuery = searchEditText.text.toString().trim()
         if (searchQuery.isEmpty()) {
             Toast.makeText(this, "Please enter a search term", Toast.LENGTH_SHORT).show()
+            isSearching = false
             return
         }
 
         progressBar.visibility = View.VISIBLE
         businesses.clear()
 
-        // Search in Firestore
         db.collection("businesses")
             .whereGreaterThanOrEqualTo("name", searchQuery)
             .whereLessThanOrEqualTo("name", searchQuery + '\uf8ff')
@@ -70,10 +74,12 @@ class BusinessSearchActivity : AppCompatActivity() {
                 }
                 adapter.notifyDataSetChanged()
                 progressBar.visibility = View.GONE
+                isSearching = false
             }
             .addOnFailureListener { e ->
                 Toast.makeText(this, "Error searching businesses: ${e.message}", Toast.LENGTH_SHORT).show()
                 progressBar.visibility = View.GONE
+                isSearching = false
             }
     }
 } 
