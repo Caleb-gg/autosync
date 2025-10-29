@@ -27,7 +27,8 @@ Each car is displayed in a **RecyclerView** using **CardViews**, and the mechani
 - **Coroutines** — asynchronous operations
 - **Material Components** — modern UI design
 - **Navigation Component** — fragment navigation
-- **ViewBinding** — type-safe view access  
+- **ViewBinding** — type-safe view access
+- **Gradle Version Catalog (libs.versions.toml)** — centralized dependency management
 
 ---
 
